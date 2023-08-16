@@ -5,7 +5,7 @@
     <server>
       <id>github</id>
       <username>${{ secrets.USER }}</username>
-      <password>${{ secrets.TOKEN }}</password>
+      <password>${{ secrets.SECRET }}</password>
     </server>
   </servers>
 </settings>
