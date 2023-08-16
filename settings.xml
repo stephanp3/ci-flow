@@ -4,8 +4,8 @@
   <servers>
     <server>
       <id>github</id>
-      <username>${env.VM_GITHUB_ACTOR}</username>
-      <password>${env.VM_GITHUB_TOKEN}</password>
+      <username>${secret.USER}</username>
+      <password>${secret.SECRET}</password>
     </server>
   </servers>
 </settings>
