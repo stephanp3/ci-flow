@@ -28,9 +28,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build Maven project and Publish to GitHub Packages
+      env:
+          GITHUB_TOKEN: ${{ secrets.MAVEN_PAT }}
       run: |
           mvn clean install -Dmaven.test.skip=true
-          mvn deploy -DskipTests=true --settings settings.xml -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/stephanp3/ci-flow
+          mvn deploy -DskipTests=true --settings settings.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     # - name: Update dependency graph
