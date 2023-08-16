@@ -4,8 +4,8 @@
   <servers>
     <server>
       <id>github</id>
-      <username>stephanp3</username>
-      <password>29f400f23da046b20b287f726edc15fd</password>
+      <username>${{ secrets.USER }}</username>
+      <password>${{ secrets.TOKEN }}</password>
     </server>
   </servers>
 </settings>
